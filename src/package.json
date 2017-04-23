@@ -1,0 +1,32 @@
+{
+  "name": "front-boilerplate0",
+  "version": "1.0.0",
+  "description": "A simple frontend boilerplate",
+  "main": "main.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "EduardoRG",
+  "license": "ISC",
+  "path": {
+    "app": {
+      "base": "./",
+      "scss": "./scss/",
+      "js": "./js/",
+      "templates": "./templates/"
+    },
+    "dist": {
+      "base": "../static/",
+      "css": "../static/sdn_ryu/css/",
+      "js": "../static/sdn_ryu/js/",
+      "templates": "../templates/"
+    }
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

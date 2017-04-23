@@ -1,2 +1,2 @@
-# sdn-ryu
-Software defined networking applications with Ryu, a component based SDN framework
+# sdn_ryu
+Software defined networking applications with Ryu, a component based SDN framework.

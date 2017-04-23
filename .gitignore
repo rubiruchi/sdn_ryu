@@ -87,3 +87,19 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+
+# Django
+db.sqlite3
+
+# Statics
+static/
+
+# OSX Trash
+.DS_Store
+
+# Python Trash
+*.pyc
+
+# Node Trash
+node_modules

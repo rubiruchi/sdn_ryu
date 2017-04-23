@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jarvis',
 ]
 
 MIDDLEWARE = [
@@ -54,8 +55,8 @@ ROOT_URLCONF = 'sdn_ryu.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -63,6 +64,14 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'loaders': [
+                # PyPugJS part:   ##############################
+                ('pypugjs.ext.django.Loader', (
+                    'django.template.loaders.filesystem.Loader',
+                    'django.template.loaders.app_directories.Loader',
+                ))
+            ],
+            'builtins': ['pypugjs.ext.django.templatetags'],
         },
     },
 ]
