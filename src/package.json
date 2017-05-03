@@ -1,7 +1,7 @@
 {
-  "name": "front-boilerplate0",
+  "name": "sdn_ryu_front",
   "version": "1.0.0",
-  "description": "A simple frontend boilerplate",
+  "description": "Front source for sdn_ryu application",
   "main": "main.js",
   "scripts": {
     "start": "gulp"
@@ -12,12 +12,14 @@
     "app": {
       "base": "./",
       "scss": "./scss/",
+      "fonts": "./fonts/",
       "js": "./js/",
       "templates": "./templates/"
     },
     "dist": {
       "base": "../static/",
       "css": "../static/sdn_ryu/css/",
+      "fonts": "../static/sdn_ryu/fonts/",
       "js": "../static/sdn_ryu/js/",
       "templates": "../templates/"
     }
