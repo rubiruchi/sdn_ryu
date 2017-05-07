@@ -1,5 +1,5 @@
 $(document).ready(function() {
 
-  // ws = new ClientWebSocket();
+  ws = new ClientWebSocket();
 
 });

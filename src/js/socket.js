@@ -4,12 +4,12 @@
 
 var ClientWebSocket = function() {
 
-  var url = 'ws://localhost:4445/ws/stream/';
+  var url = 'ws://' + window.location.host + '/ws/';
 
   this.socket = new ReconnectingWebSocket(url);
 
   this.socket.onmessage = function(msg) {
-
+    console.log(msg.data);
   };
 
   this.socket.onopen = function() {

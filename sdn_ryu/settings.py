@@ -25,7 +25,7 @@ SECRET_KEY = 'f098+_s973i_1)%xn0bs9tkd@d)7@(%fo=8edgatb3*ob&eb$('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jarvis',
+    'channels',
+    'dragon',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +79,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sdn_ryu.wsgi.application'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgiref.inmemory.ChannelLayer",
+        "ROUTING": "sdn_ryu.routing.channel_routing"
+    }
+}
 
 
 # Database
@@ -127,3 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
